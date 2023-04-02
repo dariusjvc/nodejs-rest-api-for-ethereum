@@ -13,7 +13,7 @@ node.js v19.6.0
 ```
 
 # How to deploy:
-1. Deploy the smart conctract in the blockcchain network
+1. Deploy the smart contract in the blockcchain network
 2. git clone https://github.com/dariusjvc/JavaEthereumAPI.git
 3. npm install
 4. npm run start

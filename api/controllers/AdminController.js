@@ -1,19 +1,6 @@
-import * as Swagger from './swagger.js';
-
-
+import * as AdminService from "../services/AdminService.js";
 import express, { response } from 'express';
 export const router = express.Router();
-
-//const Web3 = require('web3');
-
-import Web3 from 'web3';
-
-
-
-import {UTT_CONTACT_ADDRESS} from '../abis/upgradableTokenTest.js'; 
-import {UTT_CONTACT_ABI} from '../abis/upgradableTokenTest.js'; 
-
-
 
 /**
  * @swagger
@@ -31,23 +18,11 @@ import {UTT_CONTACT_ABI} from '../abis/upgradableTokenTest.js';
  *           $ref: '#/definitions/Admin'
  */
 router.get('/totalMinted', async (req, res, next) => {
-
-  if (typeof web3 !== 'undefined') {
-    var web3 = new Web3(web3.currentProvider); 
-    } else {
-        var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
-    }
-
-    const accounts =  web3.eth.getAccounts();
-    const contactList = new web3.eth.Contract(UTT_CONTACT_ABI, UTT_CONTACT_ADDRESS);
-    let response = null;
-
-    contactList.methods.balanceOf("0x8270bc2378075baca187f7143e37bf73303c83f1").call((error, balance) => {
-      response = parseFloat(balance)/100;
-      console.log(response); 
-      res.send(response.toString());
-    });
-    
+  let response = null;
+  var totalMinted = await AdminService.getTotalMinted();
+  response = parseFloat(totalMinted)/100;
+  console.log(response);
+  res.send(response.toString());    
   });
 
 
@@ -67,20 +42,8 @@ router.get('/totalMinted', async (req, res, next) => {
  *           $ref: '#/definitions/Admin'
  */
 router.get('/tokenName', async (req, res, next) => {
-
-  if (typeof web3 !== 'undefined') {
-    var web3 = new Web3(web3.currentProvider); 
-    } else {
-        var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
-    }
-
-    const accounts =  web3.eth.getAccounts();
-    const contactList = new web3.eth.Contract(UTT_CONTACT_ABI, UTT_CONTACT_ADDRESS);
-
-    contactList.methods.name().call((error,tokenName) => {
-     
-      res.send(tokenName);
-    });
-  
+    var tokenName = await AdminService.getTokenName();
+    console.log(tokenName);
+    res.send(tokenName);
   });
 

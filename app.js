@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 const port = 3000;
 
 import { router as adminRouter } from './api/controllers/AdminController.js';
-import { router as swaggerRouter } from './api/controllers/swagger.js';
+import { router as swaggerRouter } from './api/configuration/swagger.js';
 
 var app = express();
 

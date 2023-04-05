@@ -13,15 +13,23 @@ const contactList = new web3.eth.Contract(UTT_CONTACT_ABI, UTT_CONTACT_ADDRESS);
 
 
 function getTotalMinted(){
-    
-      return ( contactList.methods.balanceOf("0x8270bc2378075baca187f7143e37bf73303c83f1").call((error, balance) => {
-          }));
-    
+    return contactList.methods.balanceOf("0x8270bc2378075baca187f7143e37bf73303c83f1").call((error, balance) => {
+        if (error) {
+            console.log("An error occurred", error)
+          }
+          console.log("The balance is: ", balance/100)
+          });
 }
 
 function getTokenName(){
-    return (  contactList.methods.name().call((error,tokenName) => {
-      }));
+    /*return (  contactList.methods.name().call((error,tokenName) => {
+      }));*/
+      return contactList.methods.name().call((error,tokenName) => {
+        if (error) {
+            console.log("An error occurred", error)
+          }
+          console.log("The tokenName is: ",tokenName)
+          });
 
 }
 

@@ -21,7 +21,6 @@ router.get('/totalMinted', async (req, res, next) => {
   let response = null;
   var totalMinted = await AdminService.getTotalMinted();
   response = parseFloat(totalMinted)/100;
-  console.log(response);
   res.send(response.toString());    
   });
 
@@ -43,7 +42,6 @@ router.get('/totalMinted', async (req, res, next) => {
  */
 router.get('/tokenName', async (req, res, next) => {
     var tokenName = await AdminService.getTokenName();
-    console.log(tokenName);
     res.send(tokenName);
   });
 

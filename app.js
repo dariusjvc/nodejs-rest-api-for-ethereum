@@ -10,6 +10,9 @@ import { router as swaggerRouter } from './api/configuration/swagger.js';
 
 var app = express();
 
+import "dotenv/config.js";
+
+
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

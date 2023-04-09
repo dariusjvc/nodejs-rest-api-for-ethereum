@@ -8,7 +8,7 @@ if (typeof web3 !== 'undefined') {
     } else {
         var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
     }
-//const accounts =  web3.eth.getAccounts();
+
 const contactList = new web3.eth.Contract(UTT_CONTACT_ABI, UTT_CONTACT_ADDRESS);
 
 
@@ -22,8 +22,7 @@ function getTotalMinted(){
 }
 
 function getTokenName(){
-    /*return (  contactList.methods.name().call((error,tokenName) => {
-      }));*/
+
       return contactList.methods.name().call((error,tokenName) => {
         if (error) {
             console.log("An error occurred", error)

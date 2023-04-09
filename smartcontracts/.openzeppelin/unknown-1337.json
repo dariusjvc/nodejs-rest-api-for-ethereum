@@ -251,7 +251,7 @@
     },
     "88ab4b3aaa41ad7890597752a355780fdad0ceea0c7eef3b37e05a37941b6f2c": {
       "address": "0x0AEC73d891E4353cc4A4fDa3c93f03D688f191Cb",
-      "txHash": "0x1de57067b825336e987e69743b36bf6b5ff48a0d525a1515bd1d19f6d794b577",
+      "txHash": "0x72d40a6e32b378dcd3420714bfd0161f78e749baa926069200cddd88bd07572b",
       "layout": {
         "solcVersion": "0.8.9",
         "storage": [
@@ -367,22 +367,6 @@
             "type": "t_uint256",
             "contract": "UpgradableTokenTest",
             "src": "contracts/UpgradableTokenTest.sol:20"
-          },
-          {
-            "label": "bank2wallet",
-            "offset": 0,
-            "slot": "153",
-            "type": "t_mapping(t_string_memory_ptr,t_address)",
-            "contract": "UpgradableTokenTest",
-            "src": "contracts/UpgradableTokenTest.sol:22"
-          },
-          {
-            "label": "wallet2bank",
-            "offset": 0,
-            "slot": "154",
-            "type": "t_mapping(t_address,t_string_storage)",
-            "contract": "UpgradableTokenTest",
-            "src": "contracts/UpgradableTokenTest.sol:23"
           }
         ],
         "types": {
@@ -410,20 +394,8 @@
             "label": "mapping(address => mapping(address => uint256))",
             "numberOfBytes": "32"
           },
-          "t_mapping(t_address,t_string_storage)": {
-            "label": "mapping(address => string)",
-            "numberOfBytes": "32"
-          },
           "t_mapping(t_address,t_uint256)": {
             "label": "mapping(address => uint256)",
-            "numberOfBytes": "32"
-          },
-          "t_mapping(t_string_memory_ptr,t_address)": {
-            "label": "mapping(string => address)",
-            "numberOfBytes": "32"
-          },
-          "t_string_memory_ptr": {
-            "label": "string",
             "numberOfBytes": "32"
           },
           "t_string_storage": {

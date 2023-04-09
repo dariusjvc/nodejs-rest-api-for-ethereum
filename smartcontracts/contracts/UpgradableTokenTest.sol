@@ -19,9 +19,6 @@ contract UpgradableTokenTest is
     uint8 private _decimals;
     uint256 private _totalMinted;
 
-    mapping(string => address) bank2wallet;
-    mapping(address => string) wallet2bank;
-
     function initialize(
         string memory tokenName,
         string memory tokenSymbol,

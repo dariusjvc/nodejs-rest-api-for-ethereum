@@ -25,7 +25,7 @@ const options = {
     host: 'localhost:3000',
     basePath: '/api',
   },
-  apis: [ './api/controllers/AdminController.js','./api/models/admin-model.js'],
+  apis: [ './app/controllers/AdminController.js','./app/models/admin-model.js'],
 
 };
 

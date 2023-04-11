@@ -12,15 +12,16 @@
     "body-parser": "~1.18.2",
     "cookie-parser": "^1.4.5",
     "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
     "express": "~4.16.0",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
+    "request-promise": "^4.2.5",
     "serve-favicon": "~2.4.5",
     "swagger-jsdoc": "^4.0.0",
     "swagger-model-validator": "^2.2.8",
     "swagger-ui-express": "^2.0.15",
-    "web3": "^1.6.1",
-    "request-promise": "^4.2.5"
+    "web3": "^1.6.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.22",

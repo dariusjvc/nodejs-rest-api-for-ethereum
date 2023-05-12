@@ -9,7 +9,7 @@ UpgradableTokenTest
 # Requirements:
 
 ```shell
-node.js v19.6.0
+node.js v18.16.0
 ```
 
 # How to deploy:
